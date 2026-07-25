@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haroun Studio | High-Converting Digital Interfaces & Web Design</title>
+  <meta name="description" content="Custom, high-performance landing pages engineered for modern businesses. Combining technical precision with modern web aesthetics.">
+  <meta name="author" content="Haroun Hassani">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Haroun Studio | High-Converting Digital Interfaces">
+  <meta property="og:description" content="Custom, high-performance landing pages that elevate your brand presence and turn visitors into loyal clients.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP Core & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body id="top">
+
+  <!-- Custom Trailing Inverted Circle Cursor -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Page-Wide Fixed Dots Pattern Canvas Architecture -->
+  <canvas id="dots-canvas"></canvas>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="brand-logo" aria-label="Haroun Studio Home">
+        <div class="brand-mark">H</div>
+        <span>HAROUN STUDIO</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#story" class="nav-link" data-i18n="nav_story">Our Story</a></li>
+          <li><a href="#work" class="nav-link" data-i18n="nav_work">Our Work</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle" class="ctrl-btn" aria-label="Switch Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-btn-text">FR</span>
+        </button>
+
+        <!-- Light / Dark Theme Switcher Button -->
+        <button id="theme-toggle" class="ctrl-btn theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-icon" class="theme-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="#story" class="mobile-nav-link" data-i18n="nav_story">Our Story</a></li>
+      <li><a href="#work" class="mobile-nav-link" data-i18n="nav_work">Our Work</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Section 1: HERO SECTION -->
+    <section id="hero">
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span data-i18n="hero_badge">DIGITAL STUDIO & WEB DESIGN</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="shimmer-text" data-i18n="hero_headline">A LANDING PAGE FOR YOUR BUSINESS TODAY</span>
+        </h1>
+
+        <p class="hero-subhead" data-i18n="hero_subhead">
+          Custom, high-performance landing pages that elevate your brand presence and turn visitors into loyal clients.
+        </p>
+
+        <div class="cta-group">
+          <a href="#contact" class="btn-primary" data-i18n="hero_cta_primary">
+            Contact Us
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <a href="https://payhip.com" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-i18n="hero_cta_secondary">
+            Get Mine
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <!-- Hero Stat Strip -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-value" data-i18n="metric_1_val">100%</span>
+            <span class="metric-label" data-i18n="metric_1_lbl">Tailor-Made Code</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value" data-i18n="metric_2_val">&lt; 0.8s</span>
+            <span class="metric-label" data-i18n="metric_2_lbl">Ultra-Fast Load Speed</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value" data-i18n="metric_3_val">3.5x</span>
+            <span class="metric-label" data-i18n="metric_3_lbl">Average Conversion Rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 2: OUR STORY (HAROUN MacBook Artwork Graphic & Parallax Depth) -->
+    <section id="story">
+      <div class="container">
+        <span class="section-label" data-i18n="story_label">BACKGROUND & FOUNDER</span>
+        
+        <div class="story-grid">
+          <!-- MacBook Graphic Asset Container -->
+          <div class="story-macbook-wrap" id="macbook-wrap">
+            <img src="assets/images/haroun_macbook.png" alt="Haroun MacBook Graphic Asset" class="story-macbook-img" id="macbook-img">
+          </div>
+
+          <div class="story-content">
+            <h2 class="section-title" data-i18n="story_title">
+              Technical Precision Meets Modern Aesthetics
+            </h2>
+
+            <p class="story-bio" data-i18n="story_bio">
+              Founded by Haroun, a 17-year-old student, designer, and developer based in France, with strong ambitions in AI and engineering. Combining technical precision with modern web aesthetics, he crafts bespoke digital solutions for businesses worldwide.
+            </p>
+
+            <div class="story-highlights">
+              <div class="highlight-card">
+                <div class="highlight-title" data-i18n="card1_title">17-Year-Old Founder</div>
+                <div class="highlight-desc" data-i18n="card1_desc">Passionate student, designer, and full-stack web developer.</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-title" data-i18n="card2_title">AI & Engineering Track</div>
+                <div class="highlight-desc" data-i18n="card2_desc">Pursuing high-level ambitions in artificial intelligence & software engineering.</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-title" data-i18n="card3_title">Bespoke Craftsmanship</div>
+                <div class="highlight-desc" data-i18n="card3_desc">Zero bloated templates; clean architectural code built from scratch.</div>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-title" data-i18n="card4_title">Global Client Scope</div>
+                <div class="highlight-desc" data-i18n="card4_desc">Partnering with ambitious founders and modern brands globally.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 3: OUR WORK (Elevated Surface - Excludes Page Dots Canvas) -->
+    <section id="work">
+      <div class="container">
+        <div class="work-header">
+          <span class="section-label" data-i18n="work_label">OUR VALUE PROPOSITION</span>
+          <h2 class="section-title" data-i18n="work_title">
+            Why Custom Engineering Beats Cookie-Cutter Templates
+          </h2>
+          <p class="section-subtitle" data-i18n="work_subtitle">
+            Off-the-shelf templates fail because they carry bloated code, slow down load times, and lack conversion psychology. We engineer bespoke web experiences that build instant trust and authority.
+          </p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+          <!-- Card 1: Performance & SEO -->
+          <div class="bento-card bento-col-8">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <h3 class="bento-card-title" data-i18n="bento1_title">Sub-Second Load Times & Technical SEO</h3>
+              <p class="bento-card-desc" data-i18n="bento1_desc">
+                Search engines and visitors reward speed. Every line of code is optimized for instant loading, crisp rendering, and peak performance.
+              </p>
+            </div>
+            <span class="bento-card-tag" data-i18n="bento1_tag">PERFORMANCE</span>
+          </div>
+
+          <!-- Card 2: AI Engine & Chatbot Visibility (GEO) -->
+          <div class="bento-card bento-col-4">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <h3 class="bento-card-title" data-i18n="bento2_title">AI Search Engine & Chatbot Visibility (GEO)</h3>
+              <p class="bento-card-desc" data-i18n="bento2_desc">
+                In an AI-driven era where chatbots (ChatGPT, Claude, Gemini, Perplexity) perform research for buyers, a clear, structured website ensures your business gets cited as the authoritative answer.
+              </p>
+            </div>
+            <span class="bento-card-tag" data-i18n="bento2_tag">AI VISIBILITY (GEO)</span>
+          </div>
+
+          <!-- Card 3: Aesthetic Polish -->
+          <div class="bento-card bento-col-4">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <h3 class="bento-card-title" data-i18n="bento3_title">Ultra-Minimalist Agency Polish</h3>
+              <p class="bento-card-desc" data-i18n="bento3_desc">
+                Impeccable spacing, architectural dark/light palettes, and refined kinetic typography elevate your brand to enterprise level.
+              </p>
+            </div>
+            <span class="bento-card-tag" data-i18n="bento3_tag">DESIGN AESTHETICS</span>
+          </div>
+
+          <!-- Card 4: Fluid Micro-Interactions & Motion -->
+          <div class="bento-card bento-col-8">
+            <div>
+              <div class="bento-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <h3 class="bento-card-title" data-i18n="bento4_title">Fluid Micro-Interactions & Motion</h3>
+              <p class="bento-card-desc" data-i18n="bento4_desc">
+                Custom interactive cursor physics, ambient background motion, and smooth scroll reveals create an unforgettable visual experience for your clients.
+              </p>
+            </div>
+            <span class="bento-card-tag" data-i18n="bento4_tag">DYNAMIC MOTION</span>
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="work-cta-box">
+          <div class="work-cta-text">
+            <h3 data-i18n="work_cta_title">Ready to elevate your digital presence?</h3>
+            <p data-i18n="work_cta_desc">Get your bespoke landing page crafted with mathematical precision.</p>
+          </div>
+          <a href="https://payhip.com" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="work_cta_btn">
+            Get Mine Now
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 4: CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div>
+              <span class="section-label" data-i18n="contact_label">GET IN TOUCH</span>
+              <h2 class="section-title" data-i18n="contact_title">
+                Direct & Minimalist Communication
+              </h2>
+              <p class="section-subtitle" data-i18n="contact_subtitle">
+                Have a project in mind or want to discuss a custom build? Reach out directly via phone, email, or the contact form.
+              </p>
+            </div>
+
+            <!-- Direct Contact Info Card -->
+            <div class="contact-card-box">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-item-detail">
+                  <span class="contact-item-label" data-i18n="contact_phone_lbl">Direct Line (France)</span>
+                  <a href="tel:+33625606502" class="contact-item-value">+33 6 25 60 65 02</a>
+                  <button class="copy-btn" data-copy="+33625606502">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span data-i18n="contact_copy">Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-item-detail">
+                  <span class="contact-item-label" data-i18n="contact_email_lbl">Direct Email</span>
+                  <a href="mailto:hassani.harounpro@gmail.com" class="contact-item-value">hassani.harounpro@gmail.com</a>
+                  <button class="copy-btn" data-copy="hassani.harounpro@gmail.com">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span data-i18n="contact_copy">Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Minimalist Contact Form -->
+          <div class="contact-form-wrap">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label" data-i18n="form_name_lbl">Your Full Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Jean Dupont" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label" data-i18n="form_email_lbl">Your Email Address</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. jean@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label" data-i18n="form_msg_lbl">Project Overview & Budget</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Tell us about your project, goals, and desired launch timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn" data-i18n="form_btn">
+                Send Message
+              </button>
+
+              <div id="form-success-msg" class="form-success-msg" data-i18n="form_success">
+                Thank you! Your message has been received. Haroun will get back to you within 24 hours.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section 5: FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand-logo">
+            <div class="brand-mark">H</div>
+            <span>HAROUN STUDIO</span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer_tagline">
+            High-Converting Digital Interfaces Engineered for Modern Businesses.
+          </p>
+        </div>
+
+        <!-- Social Media / Store Links -->
+        <div class="footer-socials">
+          <a href="https://payhip.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Payhip Store">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </a>
+
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_copy">© 2026 Haroun Studio. All rights reserved.</span>
+        
+        <a href="#top" class="back-to-top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          <span data-i18n="footer_top">Back to top</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
